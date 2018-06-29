@@ -187,7 +187,30 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><h2 id="1-1-进化算法产生的背景"><a href="#1-1-进化算法产生的背景" class="headerlink" title="1.1 进化算法产生的背景"></a>1.1 进化算法产生的背景</h2><p>​        进化计算是求解全局最优化问题的一种新型算法，考虑如下最优化问题：</p>
+<p>​                                                                                    <script type="math/tex">\min_{x\subset D} f(x)\quad</script></p>
+<p>式中$D \subseteq R^n$。传统的求解方法有牛顿法、最速下降法、拟牛顿法、共轭梯度法等。由于传统优化方法通常要用相关系数的导数信息，而这些导数信息时由极限确定的，只能反映相关函数的局部特征，不能反映距离距离当前解较远处函数的特征，因此其往往只能求局部最优点。而实际中我们要求全局最优点，进化算法就诞生啦。</p>
+<p>​        进化计算是模拟生物进化与遗传原理的一类随机搜索的优化算法。（优胜劣汰，适者生存）<strong>整个群体的进化过程可以看做是一个优化过程，但单个个体的进化轨迹未必是一个优化过程。</strong> </p>
+<h2 id="1-2-进化算法传统的4个分支"><a href="#1-2-进化算法传统的4个分支" class="headerlink" title="1.2 进化算法传统的4个分支"></a>1.2 进化算法传统的4个分支</h2><h3 id="1-2-1-遗传算法（GA）"><a href="#1-2-1-遗传算法（GA）" class="headerlink" title="1.2.1 遗传算法（GA）"></a>1.2.1 遗传算法（GA）</h3><p>1.其算法步骤如下：</p>
+<p>（1）按照某种方式产生初始群体$p(0)={x^0_1,x^0_2,…,x^0_N}$，令t=0，对p(t)中每一个个体进行编码，得到相应的点叫染色体或字符串，计算p(t)的适应度</p>
+<p>（2）按照某种规则从p(t)中选择一个子群体$p^‘(t)\sub p(t)$作为产生后代的父母，用交叉算子作用于p(t)产生一些后代，再用变异算子作用于每个后代产生新的后代集合O，计算O中每个后代的适应度。</p>
+<p>（3）用选择算子在$p(t) \cup O$中选出下一代群体p(t+1)，令t=t+!。</p>
+<p>（4）若终止条件成立，则停止；否则，转（2）</p>
+<p>2.GA的常用术语</p>
+<p>（1）染色体=字符串=编码后的个体</p>
+<p>（2）基因=位=染色体中的每一位</p>
+<p>（3）交叉=重组=繁殖</p>
+<p>（4）变异（5）群体（6）群体规模（7）适应度（8）编码（9）译码（10）交叉概率（11）变异概率</p>
+<p>3.遗传算法五要素</p>
+<p>（1）编码（2）种群初始化（3）设计适应度函数（4）设计遗传算子（交叉选择变异）（5）参数设定</p>
+<h3 id="1-2-2-进化策略（Evolutionary-Strategies-ES-）"><a href="#1-2-2-进化策略（Evolutionary-Strategies-ES-）" class="headerlink" title="1.2.2 进化策略（Evolutionary Strategies,ES ）"></a>1.2.2 进化策略（Evolutionary Strategies,ES ）</h3><p>进化策略可分为：$(\mu +1),(\mu+\lambda),(\mu,\lambda)$策略。此处仅介绍其余GA的区别：</p>
+<p>（1）ES不需要编码。（2）GA以交叉为主，EA以变异为主。</p>
+<h3 id="1-2-3-进化规划（Evolutionary-Programming-EP-）"><a href="#1-2-3-进化规划（Evolutionary-Programming-EP-）" class="headerlink" title="1.2.3 进化规划（Evolutionary Programming, EP ）"></a>1.2.3 进化规划（Evolutionary Programming, EP ）</h3><p>EP与GA的区别：</p>
+<p>（1）EP对解的表示没有任何限制，遗传算法需要对解编码（2）EP只有变异算子。</p>
+<p>EP与ES的区别：</p>
+<p>（1）EP一般通过竞赛随机选择，ES是确定性选择抛弃最差的解。（2）进化规划不用交叉算子。</p>
+<h2 id="1-3进化计算的常用期刊"><a href="#1-3进化计算的常用期刊" class="headerlink" title="1.3进化计算的常用期刊"></a>1.3进化计算的常用期刊</h2><p><em>IEEE Transaction  in Evolutionary Computation、Evolutionary Computation、IEEE Transactions on Systems, Man, and Cybernetics.</em></p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
